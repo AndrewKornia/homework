@@ -20,9 +20,11 @@
          4.5 Буква или иной символ -Class "Letter"
          4.6 Определить високосный год или нет -Clss "Year"
 5* 
+         5.1 Определить спать ли дальше или нет =Class "Sleep"
 6 
          6.1 Используем оператор "If ElSE" -Class "NameIfElse"
          6.2 Используем Оператор "SWITCH" -Class "NameSwitch"
+         6.3 Используем оператор "IF ELSE IF" -Class NameIfElseIf
    
 
 
