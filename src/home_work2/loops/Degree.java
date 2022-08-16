@@ -6,14 +6,15 @@ public class Degree {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите число ");
-        int num = console.nextInt();
+        double num = console.nextDouble();
         System.out.println("Введите степень чилса");
         int numStepen = console.nextInt();
-        System.out.print(num+"*");
-        int num1= 1;
+        double numResult= 1;
         for (int i=0;i<numStepen ; i++){
-            num1*=num;
+            numResult*=num;
         }
-        System.out.println();
+        System.out.println(num +"^"+ numStepen+"="+numResult);
     }
 }
+
+

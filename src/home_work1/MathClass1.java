@@ -12,6 +12,5 @@ public class MathClass1 {
         double square = console1.nextDouble();
         double side = Math.sqrt(square);
         System.out.println("Сторона квадрата равна "+side);
-
     }
 }
