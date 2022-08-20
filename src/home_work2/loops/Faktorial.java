@@ -3,14 +3,29 @@ package home_work2.loops;
 
 public class Faktorial {
     public static void main(String[] args) {
-        long number = Integer.parseInt("10");
+        byte number = Byte.parseByte(args[0]);
+        String result = result(number,sum(number));;
+        System.out.println(result);
+    }
+
+        public static int sum(int number){
         int sum = 1;
-        System.out.print("1");
-        for(int i=2;i<=number;i++) {
+        for (int i = 1; i <= number; i++) {
             sum *= i;
-            System.out.print("*"+i);
+
         }
-        System.out.print("="+sum);
+        return sum;
+    }
+
+    public static String result (int number,int sum){
+        String result = "";
+        for (int i =1;i<=number;i++){
+            result+=i;
+            if(i!=number){
+                result+=" * ";
+            }
+        }
+        return result+" = "+sum;
     }
 }
 

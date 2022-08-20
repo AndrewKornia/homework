@@ -5,3 +5,6 @@
 1.4 Переполнение -Class "Class Long".
 1.5 Задачи в презентации -Class "Task"
 1.6 Таблицы умножения -Class "MultiplicationTable"
+1.7 Факториал из числа -Class "FactorialRekursia"
+
+

@@ -1,24 +1,39 @@
 package home_work2.loops;
+
+import java.util.Scanner;
+
 public class Number {
     public static void main(String[] args) {
-        int number = Integer.parseInt("788864321");
-        int a = 0;
-        int i ;
-        while (number>0){
-            i =number%10;
-            number/=10;
-             a = (a + i)*10;
+        Scanner console = new Scanner(System.in);
+        System.out.println("Введите целое число");
+
+        if(console.hasNextInt()){
+            System.out.println("Введено целое число");
+            String result = "";
+            long number = console.nextInt();
+            long resultMult= 1;
+            boolean star = false;
+            while (number!=0){
+                long digit = number % 10;
+                if(star){
+                    result = " * "+result;
+                }else {
+                    star = true;
+                }
+                result =digit + result;
+                number /=10;
+                resultMult*=digit;
+            }
+            System.out.println(result+ " = "+resultMult);
+
+
+        }else if (console.hasNextDouble()){
+            System.out.println("Введено не целое число");
+        }else {
+            System.out.println("Введена строка");
         }
-        a  /=10;
-        int result = 1;
-        while(a>0){
-         i=a%10;
-         a/=10;
-         String str ="*"+i;
-          result*=i;
-            System.out.print(str);
-        }
-        System.out.println("="+result);
+
+
     }
 }
 
