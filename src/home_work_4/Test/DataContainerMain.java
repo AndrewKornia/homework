@@ -3,8 +3,6 @@ package home_work_4.Test;
 import home_work_4.DataContainer;
 
 import java.util.Arrays;
-import java.util.Comparator;
-
 
 public class DataContainerMain {
     public static void main(String[] args) {
@@ -35,11 +33,12 @@ public class DataContainerMain {
         System.out.println(container.get(10));
         boolean indexDel=container.delete(0);
         System.out.println(indexDel);
-        boolean itemDel = container.deleted(20);
+        boolean itemDel = container.delete((Integer) 20);
         System.out.println(itemDel);
         System.out.println(Arrays.toString(container.getItems()));
         container.sort(cmp1);
         System.out.println(Arrays.toString(container.getItems()));
+        System.out.println(container);
 
 
 
