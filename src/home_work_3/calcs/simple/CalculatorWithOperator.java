@@ -26,7 +26,6 @@ public class CalculatorWithOperator implements ICalculator {
         double result = 1;
         for (int i = 1;i<b;i++){
             result *= a ;
-
         }
         return result;
     }
