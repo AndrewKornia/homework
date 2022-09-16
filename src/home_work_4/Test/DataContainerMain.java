@@ -39,6 +39,8 @@ public class DataContainerMain {
         container.sort(cmp1);
         System.out.println(Arrays.toString(container.getItems()));
         System.out.println(container);
+        container.sort(container);
+        System.out.println(container);
 
 
 

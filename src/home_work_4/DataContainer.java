@@ -1,5 +1,7 @@
 package home_work_4;
 
+import home_work_4.Test.ComparatorCombarabol;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Objects;
@@ -10,7 +12,7 @@ public class DataContainer<T> {
     private T[] data;
 
     public DataContainer(T[] data) {
-        this.data = data;
+        this.data = Arrays.copyOf(data,data.length);
     }
 
 
@@ -65,7 +67,7 @@ public class DataContainer<T> {
      * @return data имя вохвращаемого поля
      */
     public T[] getItems() {
-        return data;
+        return Arrays.copyOf(data,data.length);// Чтоб никто не пролез и ничего не изменил)))
 
     }
 
@@ -125,21 +127,15 @@ public class DataContainer<T> {
      * @param cmp
      */
     public void sort(Comparator<T> cmp) {
-        boolean sorted;
-        do {
-            sorted = true;
-            for (int i = 0; i < data.length - 1; i++) {
-                if (cmp.compare(data[i], data[i + 1]) > 0) {
-                    T tmp = data[i + 1];
-                    data[i + 1] = data[i];
-                    data[i] = tmp;
-                    sorted = false;
-                }
-            }
-        } while (!sorted);
+        DataContainer.sort(this,cmp);
+
 
     }
 
+    /**
+     * Переопределенный метод toString для отоброжения содержимого массива без ячеек null
+     * @return возвращает содиржимое массива
+     */
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("[");
@@ -157,6 +153,39 @@ public class DataContainer<T> {
         builder.append("]");
         return builder.toString();
     }
+
+    /**
+     * Метод для сортировки массива
+     * @param container экзземляр созданный на рснрве класс DanaContainer
+     * @param cmp Comparator
+     * @param <T>  говоторит о том что наш метод Generic
+     */
+    public static<T> void sort(DataContainer<T> container , Comparator<? super T  > cmp) {
+        boolean sorted;
+        do {
+            sorted = true;
+            for (int i = 0; i < container.data.length - 1; i++) {
+                if (cmp.compare(container.data[i], container.data[i + 1]) > 0) {
+                    T tmp = container.data[i + 1];
+                    container.data[i + 1] = container.data[i];
+                    container.data[i] = tmp;
+                    sorted = false;
+                }
+            }
+        } while (!sorted);
+
+    }
+
+    /**
+     * Метод для сортировеи массива
+     * @param container экзземляр созданный на рснрве класс DanaContainer
+     * @param <T> Comparator
+     */
+    public static <T> void sort(DataContainer<? extends Comparable> container) {
+        DataContainer .sort(container, new ComparatorCombarabol()) ;
+
+    }
+
 
 }
 
