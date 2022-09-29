@@ -156,7 +156,7 @@ public class DataContainer<T> {
 
     /**
      * Метод для сортировки массива
-     * @param container экзземляр созданный на рснрве класс DanaContainer
+     * @param container экзземляр созданный на основе класс DanaContainer
      * @param cmp Comparator
      * @param <T>  говоторит о том что наш метод Generic
      */
@@ -178,7 +178,7 @@ public class DataContainer<T> {
 
     /**
      * Метод для сортировеи массива
-     * @param container экзземляр созданный на рснрве класс DanaContainer
+     * @param container экзземляр созданный на основе класс DanaContainer
      * @param <T> Comparator
      */
     public static <T> void sort(DataContainer<? extends Comparable> container) {

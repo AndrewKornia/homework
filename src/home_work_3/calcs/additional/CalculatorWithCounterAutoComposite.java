@@ -13,6 +13,7 @@ public class CalculatorWithCounterAutoComposite {
     public long getCountOperation() {
         return countOperation;
     }
+
     public double sum(double a, double b){
         countOperation++;
         return this.calc2.sum(a , b);
