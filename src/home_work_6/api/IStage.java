@@ -1,6 +1,7 @@
 package home_work_6.api;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+
 
 /**
  * Описание этапа выполнения заказа
@@ -16,7 +17,7 @@ public interface IStage {
      * Когда этап был начат
      * @return
      */
-    LocalTime getTime();
+    LocalDateTime getTime();
 
 
 

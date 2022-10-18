@@ -20,6 +20,7 @@ private double price;
         this.price = price;
     }
 
+
     @Override
     /**
      * Информация о пицее
@@ -28,10 +29,12 @@ private double price;
         return this.pizza;
     }
 
-    @Override
+
     /**
-     * Информация о цене
+     * Метод возваращет прайс
+     * @return прайс
      */
+    @Override
     public double getPrice() {
         return this.price;
     }

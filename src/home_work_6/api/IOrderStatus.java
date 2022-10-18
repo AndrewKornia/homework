@@ -6,6 +6,7 @@ import java.util.List;
  * Статус заказа выданный по определенному квитку
  */
 public interface IOrderStatus {
+
     /**
      * По какомы  квитку мы получили статус
      * @return

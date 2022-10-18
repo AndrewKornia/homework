@@ -59,7 +59,7 @@ public class PizzaInfo implements IPizzaInfo {
 
     @Override
     public String toString() {
-        return name + " ( description: " + description
+        return name   + " ( description: " + description
                 + ");\n Size---" + size+"sm;" ;
     }
 }
